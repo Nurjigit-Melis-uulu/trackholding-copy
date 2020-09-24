@@ -1,12 +1,15 @@
 let links = document.querySelectorAll(".link");
-let pages = document.querySelectorAll(".page-container")
+let pages = document.querySelectorAll(".page-container");
 
 links.forEach((link) => {
   link.addEventListener("click", () => {
-    let address = link.href.split("#")[1]
+    let address = link.href.split("#")[1];
 
-    pages.forEach(page => {
+    address = address.split("%")[0];
 
+    console.log(address);
+
+    pages.forEach((page) => {
       console.log(page.id);
 
       if (page.id == address) {
@@ -14,6 +17,6 @@ links.forEach((link) => {
       } else {
         page.classList.remove("visible");
       }
-    })
+    });
   });
 });
