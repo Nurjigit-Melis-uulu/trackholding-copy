@@ -2188,7 +2188,7 @@ input:focus {
 }
 
 .header__logo_container {
-  width: 25%;
+  width: 75%;
   display: flex;
 }
 
@@ -2197,8 +2197,10 @@ input:focus {
   margin-bottom: 10px;
 }
 
-.mid-header {
+.container .flex .mid-header {
   height: 70px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .header-cart {
