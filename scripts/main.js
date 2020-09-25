@@ -30,10 +30,16 @@ window.addEventListener("load", () => {
     pages.forEach((page) => {
       console.log(page.id);
 
-      if (page.id == address) {
-        page.classList.add("visible");
+      if (address) {
+        if (page.id == address) {
+          page.classList.add("visible");
+        } else {
+          page.classList.remove("visible");
+        }
       } else {
-        page.classList.remove("visible");
+        if (page.id == "main") {
+          page.classList.add("visible");
+        }
       }
     });
   }
