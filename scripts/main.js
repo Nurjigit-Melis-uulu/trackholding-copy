@@ -20,3 +20,21 @@ links.forEach((link) => {
     });
   });
 });
+
+window.addEventListener("load", () => {
+  console.log(window.location.href);
+
+  if (window.location.href.split("#")[0].indexOf("index.html") > -1) {
+    let address = window.location.href.split("#")[1];
+
+    pages.forEach((page) => {
+      console.log(page.id);
+
+      if (page.id == address) {
+        page.classList.add("visible");
+      } else {
+        page.classList.remove("visible");
+      }
+    });
+  }
+});
